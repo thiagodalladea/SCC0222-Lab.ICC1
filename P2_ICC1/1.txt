@@ -1,3 +1,17 @@
 Nome: Thiago Prado Dalla Dea
 N. USP: 12691710
 
+No programa onde as variáveis são passadas por valor, a função swap recebe uma cópia do valor de 'a' e 'b'. Dentro da função ocorre a troca de valores de 'a' e 'b', entretanto, na função main os valores permanecem originais, pois não ocorreu uma nova atribuição de valores para as variáveis.
+
+No programa onde as variáveis são passadas por referência, a função swap recebe os endereços de memória de 'a' e 'b'. Portanto, a troca dos valores das variáveis que ocorre dentro da função swap ocorre também na função main.
+
+EXEMPLO: a = 2; b = 3;
+
+Dado o código:
+swap(a, b); printf("%d %d", a, b);
+
+O printf na função main() vai apresentar na tela "2 3".
+
+Se fizermos: swap(&a, &b);
+
+O printf na função main() vai apresentar na tela "3 2".
